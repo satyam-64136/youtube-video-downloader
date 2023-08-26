@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient(rgba(83, 90, 145, 0.212),rgba(53, 60, 110, 0.322)),url(./images/984392.jpg);
+    background-position: center;
+    background-size: cover;   
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0; /* Adjust margin to move the title to the top */
+    color: #ffffff;
+    position: absolute;
+    top: 20px; /* Adjust the top position to place it at the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center the title horizontally */
+}
+
+form {
+    text-align: center;
+}
+
+
+.urlField{
+    margin-top: 2vh;
+    align-self: center;
+    width: 100%;
+    max-width: 11000px;
+    background: rgba(46, 34, 34, 0.315);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(80%);
+}
+
+.urlField input{
+    background: transparent;
+    flex: 5;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 24px;
+    color: hwb(0 100% 0%); 
+}
+
+::placeholder{
+    color: #a6a4cc;
+}
+
+.urlField button img{
+    width: 25px;
+}
+
+.urlField button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #95a1df27;
+    cursor: pointer;
+
+}
+.urlField button:hover{
+    transform: scale(1.2);
+    transition: all 0.1s linear ;
+}
+
+
+/* DOWNLOAD BUTTON */
+.container .dwd_btn {
+    position: absolute;
+    top: 85vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80px;
+    width: 250px;
+    background: #343249b7;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.336);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+}
+
+.dwd_btn {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Remove border */
+}
+
+.content button:hover {
+    background: #7e7ab163;
+    transition: 0.3s ease;
+}
+
+.preview{
+    position: absolute;
+    left: 30%;
+    width: 100%;
+    border-radius: 2px;
+    width: 540px;
+    height: 285px;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px dashed #fff;
+
+}
+
+.preview .image{
+    display: flex;
+    width: 100%;
+    height: 110%;
+} 
+.preview.current{
+    border: none;
+}
+.preview.current .thumb{
+   display: block;
+}
+
+.preview.current h4{
+ display: none;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}
