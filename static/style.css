@@ -14,9 +14,10 @@
     background-image: linear-gradient(rgba(83, 90, 145, 0.212),rgba(53, 60, 110, 0.322)),url(./images/984392.jpg);
     background-position: center;
     background-size: cover;   
+    overflow: hidden;
 }
 
-h1 {
+h1 {font-size: 40px;
     text-align: center;
     margin: 20px 0; /* Adjust margin to move the title to the top */
     color: #ffffff;
@@ -85,7 +86,7 @@ form {
     transform: translate(-50%, -50%);
     height: 80px;
     width: 250px;
-    background: #343249b7;
+    background: #343249f3;
     border-radius: 60px;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.336);
@@ -100,6 +101,9 @@ form {
     align-items: center;
     justify-content: center;
     border: none; /* Remove border */
+    color: #ffffffd0;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .content button:hover {
@@ -107,37 +111,72 @@ form {
     transition: 0.3s ease;
 }
 
-.preview{
+.preview {
+    margin-top: 33px;
     position: absolute;
-    left: 30%;
-    width: 100%;
-    border-radius: 2px;
-    width: 540px;
-    height: 285px;
-    margin: 20px 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 860px;
+    height: 484px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
     border: 2px dashed #fff;
-
 }
 
 .preview .image{
-    display: flex;
-    width: 100%;
-    height: 110%;
+    height: 100%;
 } 
-.preview.current{
-    border: none;
-}
-.preview.current .thumb{
-   display: block;
+
+a:hover{
+    transform: scale(1.2);
+    transition: all 0.1s linear ;
 }
 
-.preview.current h4{
- display: none;
+.social-links {
+    position: absolute;
+    top: 94%; /* Adjust the top position to control vertical placement */
+    right: 20px; /* Adjust the right position to control horizontal placement */
+    display: flex;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    margin: 10px 0; /* Adjust margin for spacing between buttons */
+    border-radius: 50%;
+    display: flex;
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+    transition: transform 0.2s ease; /* Add a slight hover effect */
+    background-color: #ffffff;
+    margin: 5px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Scale the button slightly on hover */
+}
+
+.social-icon.instagram {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); /* Replace with the desired background color for Instagram */
+}
+
+.social-icon.discord {
+    background-color: #7289da;
+}
+
+.social-icon.snapchat {
+    background-color: #fffb00;
+}
+
+.social-icon.whatsapp {
+    background: #1be770; 
 }
 
 .error {
@@ -152,3 +191,4 @@ form {
         padding: 15px;
     }
 }
+
