@@ -36,4 +36,4 @@ def index():
     return render_template('index.html', thumbnail_url=thumbnail_url, error_message=error_message)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
