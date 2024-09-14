@@ -1,38 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-.container{
+.container {
     width: 100%;
     min-height: 100vh;
     padding: 5%;
-    background-image: linear-gradient(rgba(83, 90, 145, 0.212),rgba(53, 60, 110, 0.322)),url(./images/984392.jpg);
+    background-image: linear-gradient(rgba(83, 90, 145, 0.212), rgba(53, 60, 110, 0.322)), url(./images/984392.jpg);
     background-position: center;
-    background-size: cover;   
+    background-size: cover;
     overflow: hidden;
 }
 
-h1 {font-size: 40px;
+h1 {
+    font-size: 40px;
     text-align: center;
-    margin: 20px 0; /* Adjust margin to move the title to the top */
+    margin: 20px 0;
     color: #ffffff;
     position: absolute;
-    top: 20px; /* Adjust the top position to place it at the top */
+    top: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Center the title horizontally */
+    transform: translateX(-50%);
 }
 
 form {
     text-align: center;
 }
 
-
-.urlField{
+.urlField {
     margin-top: 2vh;
     align-self: center;
     width: 100%;
@@ -45,40 +45,38 @@ form {
     backdrop-filter: blur(4px) saturate(80%);
 }
 
-.urlField input{
+.urlField input {
     background: transparent;
     flex: 5;
     border: 0;
     outline: none;
     padding: 24px 20px;
     font-size: 24px;
-    color: hwb(0 100% 0%); 
+    color: hwb(0 100% 0%);
 }
 
-::placeholder{
+::placeholder {
     color: #a6a4cc;
 }
 
-.urlField button img{
+.urlField button img {
     width: 25px;
 }
 
-.urlField button{
+.urlField button {
     border: 0;
     border-radius: 50%;
     width: 60px;
     height: 60px;
     background: #95a1df27;
     cursor: pointer;
-
 }
-.urlField button:hover{
+
+.urlField button:hover {
     transform: scale(1.2);
-    transition: all 0.1s linear ;
+    transition: all 0.1s linear;
 }
 
-
-/* DOWNLOAD BUTTON */
 .container .dwd_btn {
     position: absolute;
     top: 85vh;
@@ -100,7 +98,7 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none; /* Remove border */
+    border: none;
     color: #ffffffd0;
     font-size: 30px;
     font-weight: 500;
@@ -116,8 +114,8 @@ form {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 860px;
-    height: 484px;
+    width: 865px;
+    height: 488px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,19 +124,14 @@ form {
     border: 2px dashed #fff;
 }
 
-.preview .image{
+.preview .image {
     height: 100%;
-} 
-
-a:hover{
-    transform: scale(1.2);
-    transition: all 0.1s linear ;
 }
 
 .social-links {
     position: absolute;
-    top: 94%; /* Adjust the top position to control vertical placement */
-    right: 20px; /* Adjust the right position to control horizontal placement */
+    top: 94%;
+    right: 20px;
     display: flex;
 }
 
@@ -149,25 +142,25 @@ a:hover{
     text-decoration: none;
     color: #000000;
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
-    margin: 10px 0; /* Adjust margin for spacing between buttons */
+    margin: 5px;
     border-radius: 50%;
     display: flex;
-    align-items: center; /* Center the icon vertically */
-    justify-content: center; /* Center the icon horizontally */
-    transition: transform 0.2s ease; /* Add a slight hover effect */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
     background-color: #ffffff;
-    margin: 5px;
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Scale the button slightly on hover */
+    transform: scale(1.4);
+    transition: all 0.2s linear;
 }
 
 .social-icon.instagram {
-    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); /* Replace with the desired background color for Instagram */
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
 }
 
-.social-icon.discord {
+.social-icon.github {
     background-color: #7289da;
 }
 
@@ -176,7 +169,7 @@ a:hover{
 }
 
 .social-icon.whatsapp {
-    background: #1be770; 
+    background: #1be770;
 }
 
 .error {
@@ -184,11 +177,14 @@ a:hover{
     margin-top: 10px;
 }
 
-/* Responsiveness for smaller screens */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
     .container {
         width: 90%;
         padding: 15px;
     }
-}
 
+    /* Hide social icons on mobile */
+    .social-links {
+        display: none;
+    }
+}

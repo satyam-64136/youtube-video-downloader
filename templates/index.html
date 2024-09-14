@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SASTA DOWNLOADER</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://kit.fontawesome.com/2a283bf6a0.js" crossorigin="anonymous"></script>
@@ -8,38 +10,51 @@
 <body>
     <div class="container">
         <h1>YouTube Video Downloader</h1>
-        
-        <form method="post">
+
+        <!-- Form for search and download -->
+        <form method="post" action="/" id="downloadForm">
             <div class="urlField">
-                <input type="text" id="video_url" name="video_url" placeholder="Enter YouTube Video URL" required>
-                <button type="submit" name="action" value="search" class="search-button"><img src="../static/images/search.png"></button>
+                <!-- Keep the video URL in the input field after searching -->
+                <input type="text" id="video_url" name="video_url" placeholder="Enter YouTube Video URL" value="{{ video_url if video_url else '' }}" required>
+                
+                <button type="submit" name="action" value="search" class="search-button">
+                    <img src="{{ url_for('static', filename='images/search.png') }}" alt="Search">
+                </button>
             </div>
+
+            <!-- Hidden input field to store the video URL for the download action -->
+            <input type="hidden" name="video_url_hidden" value="{{ video_url if video_url else '' }}">
+
+            <!-- Download Button appears only after a successful search -->
+            {% if thumbnail_url %}
+            <div class="content">
+                <button type="submit" name="action" value="download" class="dwd_btn">Download</button>
+            </div>
+            {% endif %}
         </form>
-    
+
+        <!-- Display thumbnail if available -->
         {% if thumbnail_url %}
         <div class="preview">
             <img src="{{ thumbnail_url }}" alt="Thumbnail" class="image" id="thumbnail" loading="lazy">
         </div>
         {% endif %}
-    
-        <!-- Download Button -->
-        <div class="content">
-            <button type="submit" name="action" value="download" class="dwd_btn">Download</button>
-        </div>
-    
+
         <!-- Social Links -->
         <div class="social-links">
-            <a href="#" class="social-icon instagram"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="#" class="social-icon discord"><i class="fab fa-discord fa-2x"></i></a>
-            <a href="#" class="social-icon snapchat"><i class="fab fa-snapchat fa-2x"></i></a>
-            <a href="https://wa.me/919162591726?text=Hello!" class="social-icon whatsapp"><i class="fab fa-whatsapp fa-2x"></i></a>
-        </div>      
-    
-        <!-- Display error message if available -->
-        {% if error_message %}
-        <div class="error">{{ error_message }}</div>
-        {% endif %}
+            <a href="https://www.instagram.com/kanon_0_o" class="social-icon instagram">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://github.com/satyam-64136" class="social-icon github">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://www.snapchat.com/add/satyamkr0_0?sender_web_id=3fd3fbc3-4ef7-4025-9590-c4adb944180c&device_type=desktop&is_copy_url=true" class="social-icon snapchat">
+                <i class="fab fa-snapchat fa-2x"></i>
+            </a>
+            <a href="https://wa.me/919162591726?text=Hello!" class="social-icon whatsapp">
+                <i class="fab fa-whatsapp fa-2x"></i>
+            </a>
+        </div>
     </div>
-    
 </body>
 </html>
