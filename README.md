@@ -22,10 +22,7 @@ First, clone the repository to your local machine:
 ```bash
 git clone https://github.com/satyam-64136/youtube-video-downloader.git
 cd youtube-video-downloader
-## Create a Virtual Environment
+## Create a Virtual Environment 
 
-It's recommended to use a virtual environment to manage dependencies. Create and activate a virtual environment:
 
-```bash
-python -m venv venv
 
