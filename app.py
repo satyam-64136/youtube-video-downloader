@@ -59,4 +59,4 @@ def index():
     return render_template('index.html', video_url=video_url, thumbnail_url=thumbnail_url, video_title=video_title, error_message=error_message)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    serve(app, host='0.0.0.0', port=8080)
